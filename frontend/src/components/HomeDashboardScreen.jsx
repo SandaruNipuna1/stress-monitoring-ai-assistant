@@ -148,7 +148,7 @@ export default function HomeDashboardScreen({
 
     const overviewStats = useMemo(() => ([
         { label: "Support Topics", value: topics.length, detail: "Guided areas ready", tone: "calm" },
-        { label: "Wellbeing Score", value: `${dashboard?.wellbeingScore ?? 0}/5`, detail: "Recent baseline", tone: "sky" },
+        { label: "Overall Snapshot", value: `${dashboard?.overallSupportScore ?? 0}/5`, detail: dashboard?.overallSupportLabel || "Recent baseline", tone: "sky" },
         { label: "Recommendations Done", value: dashboard?.doneCount ?? 0, detail: "Support actions completed", tone: "mint" },
         { label: "Recent Entries", value: dashboard?.recentMoods?.length ?? 0, detail: "Mood snapshots recorded", tone: "sand" },
     ]), [dashboard, topics.length]);
@@ -205,6 +205,17 @@ export default function HomeDashboardScreen({
 
                             <div className="home-summary-top">
                                 <div className="home-pattern-copy">
+                                    <div className="home-overall-snapshot">
+                                        <span className="checkin-kicker">Overall Support Snapshot</span>
+                                        <div className="home-overall-snapshot-head">
+                                            <strong>{dashboard?.overallSupportLabel || "Building snapshot"}</strong>
+                                            <span>{dashboard?.overallSupportScore ?? 0}/5</span>
+                                        </div>
+                                        <div className="home-overall-snapshot-track" aria-hidden="true">
+                                            <span style={{ width: `${((dashboard?.overallSupportScore ?? 0) / 5) * 100}%` }} />
+                                        </div>
+                                        <p>{dashboard?.overallSupportSummary || "We’re building a combined view from your support activity."}</p>
+                                    </div>
                                     <strong>
                                         {recentMoods.length
                                             ? `Latest mood: ${recentMoods[0].mood}`

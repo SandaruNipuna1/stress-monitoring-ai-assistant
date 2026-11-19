@@ -867,6 +867,54 @@ textarea:focus-visible {
   line-height: 1.6;
 }
 
+.home-overall-snapshot {
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 0.95rem;
+  border-radius: 18px;
+  border: 1px solid rgba(124, 174, 199, 0.18);
+  background: linear-gradient(135deg, rgba(124, 174, 199, 0.12), rgba(255, 255, 255, 0.86));
+}
+
+.home-overall-snapshot-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 0.35rem;
+}
+
+.home-overall-snapshot-head strong {
+  font-size: 1rem;
+}
+
+.home-overall-snapshot-head span {
+  color: #4a7184;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.home-overall-snapshot-track {
+  width: 100%;
+  height: 0.6rem;
+  margin: 0.75rem 0 0.7rem;
+  border-radius: 999px;
+  background: rgba(124, 174, 199, 0.14);
+  overflow: hidden;
+}
+
+.home-overall-snapshot-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #86c4b8, #7caec7);
+}
+
+.home-overall-snapshot p {
+  margin: 0;
+  color: #607984;
+  line-height: 1.6;
+}
+
 .home-mini-chart {
   width: 100%;
   min-height: 138px;

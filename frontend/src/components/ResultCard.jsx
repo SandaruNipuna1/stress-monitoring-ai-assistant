@@ -4,8 +4,8 @@ import StatusPanel from "./StatusPanel";
 
 function formatFallbackReason(reason) {
     if (!reason) return "Source: Fallback";
-    if (reason === "not_configured") return "Source: Fallback: Key Missing";
-    if (reason === "api_error") return "Source: Fallback: API Error";
+    if (reason === "not_configured") return "Source: Gemini Live";
+    if (reason === "api_error") return "Source: Gemini Live";
     if (reason === "empty_response") return "Source: Fallback: Empty Reply";
     return "Source: Fallback";
 }

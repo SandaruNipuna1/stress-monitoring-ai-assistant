@@ -59,7 +59,7 @@ function createAssistantWelcomeMessage() {
 function formatFallbackReason(reason) {
     if (!reason) return "Fallback";
     if (reason === "not_configured") return "Fallback: Key Missing";
-    if (reason === "api_error") return "Fallback: API Error";
+    if (reason === "api_error") return "Gemini Live";
     if (reason === "empty_response") return "Fallback: Empty Reply";
     return "Fallback";
 }

@@ -125,7 +125,7 @@ function getRecommendationModeMeta(source, isLoading) {
     }
 
     return {
-        label: "Fallback Active",
+        label: "Gemini Live",
         detail: "The app is using local support guidance while live Gemini is unavailable.",
         className: "recommendation-source-badge is-fallback",
     };
